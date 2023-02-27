@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<meta lang="es">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+	<title>Proyecto Final Front End TICMAS</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;700&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" type="text/css" href="css/style01.css?v=2">
+
+	<script src="js/randomUser.js?v=4"></script>
+
+	<script src="https://kit.fontawesome.com/e3719fcc0e.js" crossorigin="anonymous"></script>
+
+	<script language="js" type="text/javascript">
+
+	</script>
+
+</head>
+
+<body onload="importJSON();">
+	<div class="column1">
+	</div>
+	<div class="column3">
+	</div>
+	<div id="container-main">
+		<header class="header" >
+			<div class="container">	
+				<div class="btn-menu">
+					<label for="btn-menu" class="icon-menu">
+						<span class="iconStyle">
+							<i class="fa-solid fa-bars fa-shake"></i>
+						</span>
+					</label>
+				</div>
+				<div class="logo">
+					<h1>Curriculo Aleatorio</h1>
+				</div>
+				<nav class="menu">
+					<a href="indexEn.html">English</a>			
+				</nav>
+			</div>
+		</header>
+	
+		<input type="checkbox" id="btn-menu"/>
+
+		<div class="container-menu">
+			<div class="cont-menu">
+				<nav class="menu">
+					<a href="#" onclick="goTo('1');">Datos Personales</a>
+					<a href="#" onclick="goTo('2');">Domicilio</a>
+					<a href="#" onclick="goTo('3');">Contacto</a>
+					<a href="#" onclick="goTo('4');">Datos de Acceso</a>
+					<a href="#" onclick="goTo('5');">Informacion</a>
+					<a href="#" onclick="goTo('6');">Acerca de</a>			
+				</nav>
+				<label for="btn-menu" class="icon-menu">
+					<span class="iconStyle">
+						<i class="fa-regular fa-circle-xmark"></i>
+					</span>
+				</label>	
+			</div>
+		</div>
+
+		<main>
+			<section id="section1" class="hide-section">
+				<figure>
+					<img id="results_picture" alt="Imagen no disponible" />
+					<figcaption id="results_title_name_last"></figcaption>
+				</figure>
+				<h2>Datos Personales</h2>
+				<p class="field-name">Titulo</p>
+				<p id="results_name_title" class="field-value"></p>
+				<p class="field-name">Nombre</p>
+				<p id="results_name_first" class="field-value"></p>
+				<p class="field-name">Apellido</p>
+				<p id="results_name_last" class="field-value"></p>
+				<p class="field-name">Genero</p>
+				<p id="results_gender" class="field-value"></p>
+				<p class="field-name">Pais</p>
+				<p id="results_nat" class="field-value"></p>
+				<p class="field-name">Nacimiento</p>
+				<p id="results_dob_date" class="field-value"></p>
+				<p class="field-name">Edad</p>
+				<p id="results_dob_age" class="field-value"></p>
+			</section>
+			<section id="section2" class="hide-section">
+				<h2>Domicilio</h2>
+				<p class="field-name">Pais</p>
+				<p id="results_location_country" class="field-value"></p>
+				<p class="field-name">Provincia</p>
+				<p id="results_location_state" class="field-value"></p>
+				<p class="field-name">Ciudad</p>
+				<p id="results_location_city" class="field-value"></p>
+				<p class="field-name">Coidgo Postal</p>
+				<p id="results_location_postcode" class="field-value"></p>
+				<p class="field-name">Calle</p>
+				<p id="results_location_street_name" class="field-value"></p>
+				<p class="field-name">Numero</p>
+				<p id="results_location_street_number" class="field-value"></p>
+				<p class="field-name-title">COORDENADAS</p>
+				<p class="field-name">Latitud</p>
+				<p id="results_location_coordinates_latitude" class="field-value"></p>
+				<p class="field-name">Longitud</p>
+				<p id="results_location_coordinates_longitude" class="field-value"></p>
+				<p class="field-name-title">ZONA HORARIA</p>
+				<p class="field-name">GMT</p>
+				<p id="results_location_timezone_offset" class="field-value"></p>
+				<p class="field-name">Descripcion</p>
+				<p id="results_location_timezone_description" class="field-value"></p>
+				<div class="mapouter">
+					<div class="gmap_canvas">
+						<iframe id="googlemap" class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54411.56306903083!2d-68.53267665!3d-31.531775499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96814029a33cd497%3A0xbff3a3a0233cfcb3!2sSan%20Juan!5e0!3m2!1ses-419!2sar!4v1677019714363!5m2!1ses-419!2sar"></iframe>
+						<!--
+								referencia https://moz.com/ugc/everything-you-never-wanted-to-know-about-google-maps-parameters
+								otra referncia https://stackoverrun.com/es/q/570445
+								
+								este ejemplo funciona para buscar por domicilio
+								<iframe src="http://maps.google.com/maps?q=ASCASUBI+SUR+3327+VILLA KRAUSE+SAN JUAN&loc:-31.572228+-68.536357&z=16&output=embed" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								
+								este emjemplo funciona por coordenadas
+								<iframe src="http://maps.google.com/maps?q=-31.572228,-68.536357&z=16&output=embed&hl=es" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							-->
+					</div>
+				</div>
+			</section>
+			<section id="section3" class="hide-section">
+				<h2>Contacto</h2>
+				<p class="field-name">Telefono</p>
+				<p id="results_phone" class="field-value"></p>
+				<p class="field-name">Celular</p>
+				<p id="results_cell" class="field-value"></p>
+				<p class="field-name">e-mail</p>
+				<p id="results_email" class="field-value"></p>
+			</section>
+			<section id="section4" class="hide-section">
+				<h2>Datos De Acceso</h2>
+				<p class="field-name">Uuid</p>
+				<p id="results_login_uuid" class="field-value"></p>
+				<p class="field-name">Usuario</p>
+				<p id="results_login_username" class="field-value"></p>
+				<p class="field-name">Contraseña</p>
+				<p id="results_login_password" class="field-value"></p>
+				<p class="field-name-title">CRIPTOGRAFIA</p>
+				<p class="field-name">Salt</p>
+				<p id="results_login_salt" class="field-value"></p>
+				<p class="field-name">MD5</p>
+				<p id="results_login_md5" class="field-value"></p>
+				<p class="field-name">SHA1</p>
+				<p id="results_login_sha1" class="field-value"></p>
+				<p class="field-name">SHA256</p>
+				<p id="results_login_sha256" class="field-value"></p>
+			</section>
+			<section id="section5" class="hide-section">
+				<h2>Informacion</h2>
+				<p class="field-name">Semilla</p>
+				<p id="info_seed" class="field-value"></p>
+				<p class="field-name">Resultado</p>
+				<p id="info_results" class="field-value"></p>
+				<p class="field-name">Pagina</p>
+				<p id="info_page" class="field-value"></p>
+				<p class="field-name">Version</p>
+				<p id="info_version" class="field-value"></p>
+			</section>
+			<section id="section6" class="hide-section">
+				<h2>Acerca de</h2>
+				<!--<p class="field-name">Usuarios Aleatorios</p>-->
+				<p id="info_seed" class="field-value">Usuarios Aleatorios - Proyecto Final</p>
+				<p class="field-name">Diseño Web</p>
+				<p id="info_results" class="field-value">Eduardo M. Olivares</p>
+				<p class="field-name">e-mail</p>
+				<p id="info_page" class="field-value">eduardomarceloolivares@gmail.com</p>
+				<p class="field-name">Version</p>
+				<p id="info_version" class="field-value">1.0</p>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
