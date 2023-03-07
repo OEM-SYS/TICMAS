@@ -64,6 +64,8 @@ function importJSON(){
             document.getElementById("info_results").textContent=result.info.results;
             document.getElementById("info_page").textContent=result.info.page;
             document.getElementById("info_version").textContent=result.info.version;
+            goTo('1');
+            document.getElementById('btn-menu').click();
         }/*end if(this.readyState==4 && this.status==200)*/
     }/*end function*/
     call.open('GET',url,true);
